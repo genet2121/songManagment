@@ -20,6 +20,9 @@ if (!process.env.MONGO_URI) {
   console.error('Error: MONGO_URI is not defined in the environment variables.');
   process.exit(1);
 }
+app.get('/', (req, res) => {
+  res.send('API is running...');
+});
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
