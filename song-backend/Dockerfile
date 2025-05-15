@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 5000
 
 # Start the application using nodemon (from package.json)
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
+CMD ["node", "src/index.js"]
